@@ -1,0 +1,140 @@
+body, html {
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	height: 100%;
+	color:#59A971;
+	font-family: sans-serif;
+}
+html {
+	overflow-x: hidden;
+}
+* {
+	margin: 0;
+}
+
+header {
+	height: 80%;
+	position: relative;
+}
+
+header > * {
+	position: absolute;
+	bottom: 0;
+	font-size: 5em;
+	left: 10px;
+}
+.background-overlay {
+	position: fixed;
+	top: 0;
+	height: 80%;
+	width: 100%;
+	background: url(img/header-background.png);
+	background-size: cover;
+	background-position: center;
+	z-index: -1;
+}
+.small-title {
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+	display: none;
+}
+main {
+	background: #000;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: reverse;
+	-ms-flex-direction: row-reverse;
+	flex-direction: row-reverse;
+	-webkit-box-shadow: 0px -43px 56px 0px rgba(0,0,0,1);
+box-shadow: 0px -43px 56px 0px rgba(0,0,0,1);
+}
+main > * {
+	width: 50%;
+}
+/* members info styling */
+.members-info {
+	position: relative;
+}
+.gallery-container {
+	display: grid;
+	width: 360px;
+	grid-template-columns: 120px 120px 120px;
+	grid-template-areas: 
+		"sxun so taiki"
+		"tomonori minami ."
+		"kei . .";
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+	margin: 100px auto 0;
+}
+.diamond-img {
+	width: 120px;
+	height: 120px;
+	position: relative;
+	overflow: hidden;
+}
+.diamond-img > img {
+	max-width: 100%;
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg) scale(1.8);
+	-webkit-transform-origin: left;
+	transform-origin: center;
+}
+.diamond-img > figcaption {
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	position: absolute;
+	top: 0;
+	opacity: 0;
+}
+.name {
+	font-size: 1.3em;
+	font-weight: 600;
+}
+.diamond-img:hover {
+	-webkit-transition: .6s;
+	transition: .6s;
+	-webkit-transform: scale(1.2);
+	transform: scale(1.2);
+	-webkit-transform-origin: center;
+	transform-origin: center;
+	overflow: visible;
+	z-index: 4;
+}
+.diamond-img:hover > figcaption {
+	opacity: 1;
+	left: 100%;
+	-webkit-transition: .3s .6s;
+	transition: .3s .6s;
+}
+#img-div {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	padding: 15px;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+#img-div > * {
+	width: 100%;
+}
+/*article*/
+article {
+	padding: 20px;
+}
+article * {
+	line-height: 24px;
+	margin: 10px 0;
+}
+article h2 {
+	font-size: 2.4em;
+}
+footer {
+	padding: 80px 0;
+	background: #000;
+	text-align: center;
+}
